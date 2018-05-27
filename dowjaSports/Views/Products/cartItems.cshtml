@@ -1,0 +1,98 @@
+﻿@model IEnumerable<dowjaSports.Models.cart>
+
+@{
+    ViewBag.Title = "cartItems";
+    Layout = "~/Views/Shared/_Mylayout.cshtml";
+}
+
+<h2>Cart</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.imgUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.payment)
+        </th>
+      
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <div class="col-md-12">
+                <div class=col-md-3><img style="width:100px;height:100px" class="img-responsive img-thumbnail" src="@Html.DisplayFor(modelItem => item.imgUrl)" /></div>
+                <div class="col-md-9"><h5>Product Name:@item.productName</h5></div>
+            </div>
+
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.payment)
+        </td>
+       
+        <td>
+            <a class="btn btn-danger delItem" data-key="@item.key">Delete</a>
+        </td>
+    </tr>
+}
+   
+</table>
+<div class="col-md-12">
+    <div class="col-md-10"></div>
+    <div class="col-md-2">
+        <a class="btn btn-primary right" href="/Products/userForm" >Next Step</a>
+    </div>
+</div>
+@section scripts
+{
+
+    <script>
+
+
+        $('.delItem').click(function () {
+
+            var key = $(this).data("key");
+          
+            $.ajax({
+
+                url: "/Products/deleteItem",
+                datatype: "text",
+                type: "GET",
+                data: { 'key': key },
+
+                success: function (data) {
+                    location.reload();
+                },
+                error: function () {
+                    alert("ERROR, Try Again");
+                },
+                complete: function () {
+
+                }
+            });
+
+
+
+            alert(1);
+
+        });
+
+
+    </script>
+
+}

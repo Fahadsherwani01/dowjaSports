@@ -1,0 +1,595 @@
+﻿@{
+    Layout = null;
+}
+
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sport A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var items = document.getElementById("totalItem");
+            
+            $.ajax({
+
+                url: "/Products/totalCookies",
+                datatype: "text",
+                type: "GET",
+
+                success: function (data) {
+                    items.innerHTML = "Cart(" + data + ")";
+                },
+                error: function () {
+                    alert("ERROR, Try Again");
+                },
+                complete: function () {
+
+                }
+            });
+        })
+    </script>
+
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Sport Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+
+</head>
+<body>
+    <!--header-->
+    <div class="line">
+
+    </div>
+    <div class="header">
+        <div class="logo">
+            <a href="~/home/index"><img class="img-responsive center-block" style="height:90px;width:130px" src="~/logo/logo2.png" alt=""></a>
+        </div>
+        <img  />
+        <div class="header-top" style="background-color:dodgerblue">
+            <div class="header-grid">
+                <ul class="header-in">
+                    <li><a href="account.html" style="color:white">My Account   </a> </li>
+                    <li>
+                        <a href="account.html" style="color:white">My Account   </a>
+                    </li>
+                </ul>
+                <div class="search-box">
+                    <div id="sb-search" class="sb-search">
+                        <form>
+                            <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+                            <span class="sb-icon-search"> </span>
+                        </form>
+                    </div>
+                </div>
+                <!-- search-scripts -->
+                <script src="~/js/classie.js"></script>
+                <script src="~/js/uisearch.js"></script>
+                <script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+                </script>
+                <!-- //search-scripts -->
+                <div class="online">
+                    <a id="totalItem" href="/Products/cartItems"></a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="header-bottom">
+                <div class="h_menu4">
+                    <!-- start h_menu4 -->
+                    <a class="toggleMenu" href="#">Menu</a>
+                    <ul class="nav">
+                        <li class="active"><a href="/Home/Index">Home</a></li>
+                      
+                        <li>
+                            <a href="product.html">Uniforms <i> </i></a>
+                            <ul>
+                                <li><a href="/Products/Items?cat=Uniforms&subCat=american fooyball uniforms">american fooyball uniforms</a></li>
+                                <li><a href="/Products/Items?cat=Uniforms&subCat=baketball uniforms">baketball uniforms</a></li>
+                                <li><a href="/Products/Items?cat=Uniforms&subCat=baseball uniforms">baseball uniforms</a></li>
+                                <li><a href="/Products/Items?cat=Uniforms&subCat=goal keeper uniforms">goal keeper uniforms</a></li>
+                                <li><a href="/Products/Items?cat=Uniforms&subCat=Ice Hockey Uniforms">Ice Hockey Uniforms</a></li>
+                                <li><a href="/Products/Items?cat=Uniforms&subCat=Rugby Uniforms">Rugby Uniforms</a></li>
+                               
+
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="product.html">Sports Wear <i> </i></a>
+                            <ul>
+                                <li><a href="/Products/Items?cat=sports Wear&subCat=caps">Caps</a></li>
+                                <li><a href="/Products/Items?cat=Sports Wear&subCat=Hockley Jersey">Hockley Jersey</a></li>
+                                <li><a href="/Products/Items?cat=Sports Wear&subCat=Horse Veterinary"></a>Horse Veterinary</li>
+                                <li><a href="/Products/Items?cat=Sports Wear&subCat=Rain Jackets">Rain Jackets</a></li>
+                                <li><a href="/Products/Items?cat=Sports Wear&subCat=Soccer Kits">Soccer Kits</a></li>
+                                <li><a href="/Products/Items?cat=Sports Wear&subCat=Sports Duffel Bags">Sports Duffel Bags</a></li>
+                                <li><a href="/Products/Items?cat=Sports Wear&subCat=Track Suits">Track Suits</a></li>
+                                <li><a href="/Products/Items?cat=Sports Wear&subCat=Training-Bibs">Training-Bibs</a></li>
+                                <li><a href="/Products/Items?cat=Sports Wear&subCat=Varsity Jackets">Varsity Jackets</a></li>
+                                <li><a href="/Products/Items?cat=Sports Wear&subCat=Warmup Suits">Warmup Suits</a></li>
+
+
+                            </ul>
+                        </li>
+                        <li>
+                        
+                            <a href="product.html">Gloves <i> </i></a>
+                            <ul>
+                                <li><a href="/Products/Items?cat=Gloves&subCat=Assembly Gloves">Assembly Gloves</a></li>
+                                <li><a href="/Products/Items?cat=Gloves&subCat=Bag Gloves">Bag Gloves</a></li>
+                                <li><a href="/Products/Items?cat=Gloves&subCat=Boxing Gloves">Boxing Gloves</a></li>
+                                <li><a href="/Products/Items?cat=Gloves&subCat=Canadian Gloves">Canadian Gloves</a></li>
+                                <li><a href="/Products/Items?cat=Gloves&subCat=Cycling Gloves">Cycling Gloves</a></li>
+                                <li><a href="/Products/Items?cat=Gloves&subCat=Driving Gloves">Driving Gloves</a></li>
+                                <li><a href="/Products/Items?cat=Gloves&subCat=Mechanics Gloves">Mechanics Gloves</a></li>
+                                <li><a href="/Products/Items?cat=Gloves&subCat=Welding Gloves">Welding Gloves</a></li>
+                                <li><a href="/Products/Items?cat=Gloves&subCat=Working Gloves">Working Gloves</a></li>
+                                
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="product.html">Boxing Gear <i> </i></a>
+                            <ul>
+                                <li><a href="/Products/Items?cat=Boxing Gear&subCat=Arm Shields">Arm Shields</a></li>
+                                <li ><a href="/Products/Items?cat=Boxing Gear&subCat=Focus Pads">Focus Pads</a></li>
+                                <li><a href="/Products/Items?cat=Boxing Gear&subCat=Hand Wraps">Hand Wraps</a></li>
+                                <li><a href="/Products/Items?cat=Boxing Gear&subCat=Head Guards">Head Guards</a></li>
+                                <li><a href="/Products/Items?cat=Boxing Gear&subCat=Mouth Guards">Mouth Guards</a></li>
+                                <li><a href="/Products/Items?cat=Boxing Gear&subCat=Punching Bags">Punching Bags</a></li>
+                                <li><a href="/Products/Items?cat=Boxing Gear&subCat=Shin Guards">Shin Guards</a></li>
+                                <li><a href="/Products/Items?cat=Boxing Gear&subCat=Skipping Rope">Skipping Rope</a></li>
+                                <li><a href="/Products/Items?cat=Boxing Gear&subCat=Speed Balls">Speed Balls</a></li>
+                                <li><a href="/Products/Items?cat=Boxing Gear&subCat=Tudo Shorts">Tudo Shorts</a></li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    <script type="text/javascript" src="~/js/nav.js"></script>
+                </div><!-- end h_menu4 -->
+                <ul class="header-bottom-in">
+                   
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <!---->
+    <div class="banner">
+        <div class="container">
+            <div class="banner-matter">
+                <h1>Get active get running<span>push your limits</h1>
+                <div class="out">
+                    <a  class="find">FIND OUT MORE </a>
+                    <a class="shop">SHOP</a>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="content">
+        <div class="sport-your">
+            <!-- requried-jsfiles-for owl -->
+            <link href="~/css/owl.carousel.css" rel="stylesheet">
+            <script src="~/js/owl.carousel.js"></script>
+            <script>
+									    $(document).ready(function() {
+									      $("#owl-demo").owlCarousel({
+									        items : 5,
+									        lazyLoad : true,
+									        autoPlay : true,
+									        navigation : true,
+									        navigationText :  true,
+									        pagination : false,
+									      });
+									    });
+            </script>
+            <!-- //requried-jsfiles-for owl -->
+            <!-- start content_slider -->
+            <div class="line1">
+
+            </div>
+            <div id="example1">
+                <div id="owl-demo" class="owl-carousel text-center">
+                    <div class="item">
+                        <a href="/Products/Items?cat=sports wear&subCat=Soccer Kits" title="image" rel="title1">
+                            <img class="img-responsive" style="height:200px;width:250px" src="~/Items/sports wear/Soccer Kits/01-11-600x600.jpg" alt="">
+                            
+                            <div class="run">
+                                <i> </i>
+                                <p>SOCCER KITS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/Products/Items?cat=sports wear&subCat=Rugby Uniforms" title="image" rel="title1">
+                            <img class="img-responsive" style="height:200px;width:250px" src="~/Items/Uniforms/Rugby Uniforms/002.jpg" alt="">
+
+                            
+                            <div class="run">
+                                <i class="foot-in"> </i>
+                                <p>RUGBY UNIFORMS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/Products/Items?cat=sports wear&subCat=caps" title="image" rel="title1">
+                            <img class="img-responsive "  style="height:200px;width:250px" src="~/Items/sports wear/caps/01-6.jpg" alt="">
+                            <div class="run">
+                                
+                                <i class="cycling"> </i>
+                                <p>CAPS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/Products/Items?cat=Uniforms&subCat=baseball uniforms" title="image" rel="title1">
+                            <img class="img-responsive "  style="height:200px;width:250px" src="~/Items/Uniforms/baseball uniforms/01-5.jpg" alt="">
+                            <div class="run">
+
+                                <i class="fitness"> </i>
+                                <p>BASEBALL UNIFORMS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/Products/Items?cat=sports wear&subCat=Rain-Jackets" title="image" rel="title1">
+                            <img class="img-responsive " style="height:200px;width:250px" src="~/Items/sports wear/Rain-Jackets/02-11.jpg" alt="">
+                            <div class="run">
+                                <i class="sport-your"> </i>
+                                
+                                <p>RAIN JACKETS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/Products/Items?cat=sports wear&subCat=Track Suits" title="image" rel="title1">
+                            <img class="img-responsive " style="height:200px;width:250px" src="~/Items/sports wear/Track Suits/03-15-600x600.jpg" alt="">
+                            <div class="run">
+                                <i> </i>
+
+                                
+                                <p>TRACK SUITS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/Products/Items?cat=Uniforms&subCat=baketball uniforms" title="image" rel="title1">
+                            <img class="img-responsive " style="height:200px;width:250px"  src="~/Items/Uniforms/baketball uniforms/01-45.jpg" alt="">
+                            <div class="run">
+                                <i class="foot-in"> </i>
+                               
+                                <p>basketball KIT</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/Products/Items?cat=Uniforms&subCat=baseball uniforms" title="image" rel="title1">
+                            <img class="img-responsive " style="height:200px;width:250px" src="~/Items/Uniforms/baseball uniforms/01-5.jpg" alt="">
+                            <div class="run">
+                                <i class="cycling"> </i>
+                            
+                                <p>BaseBall Kit</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/Products/Items?cat=sports wear&subCat=Soccer Kits" title="image" rel="title1">
+                            <img class="img-responsive " style="height:200px;width:250px" src="~/Items/sports wear/Soccer Kits/01-11-600x600.jpg" alt="">
+                            <div class="run">
+                                <i class="fitness"> </i>
+                               
+                                <p>Soccer Kit</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/Products/Items?cat=sports wear&subCat=Training-Bibs" title="image" rel="title1">
+                            <img class="img-responsive " style="height:200px;width:250px" src="~/Items/sports wear/Training-Bibs/01-46-600x600.jpg" alt="">
+                            <div class="run">
+                                <i class="tennis"> </i>
+                                
+                                <p>Training Bibs</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/Products/Items?cat=sports wear&subCat=Warmup Suits" title="image" rel="title1">
+                            <img class="img-responsive " style="height:200px;width:250px" src="~/Items/sports wear/Warmup Suits/04-15.jpg" alt="">
+                            <div class="run">
+                                <i> </i>
+                               
+                                <p>RUNNING</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h6 class="your-in">Your sport</h6>
+            <div class="line2">
+
+            </div>
+        </div>
+        <!--//sreen-gallery-cursual---->
+        <div class="content-grids">
+            <h3 style="text-align:center"><a>Sports wear</a></h3>
+            <div class="line1"></div>
+            <br />
+            <div class="col-md-4 content-grid">
+                <a href="/Products/Items?cat=sports wear&subCat=Warmup Suits" class="lot"><img class="img-responsive "  src="~/Items/sports wear/Warmup Suits/01-15.jpg"  alt=""></a>
+                <div class="shoe">
+                    <p>
+                        
+                        Classic Warm Suit
+                        Blue with White
+                    </p>
+                    <label></label>
+                    <a href="/Products/Items?cat=sports wear&subCat=Warmup Suits">find a store</a>
+                </div>
+                <div class="clearfix"> </div>
+                <b class="plus-in">+</b>
+            </div>
+            <div class="col-md-4 content-grid">
+                <a href="/Products/Items?cat=sports wear&subCat=Horse Veterinary" class="lot"><img class="img-responsive " src="~/Items/sports wear/Horse Veterinary/IMG_20180307_151820_760 (1).jpg" alt=""></a>
+                <div class="shoe">
+
+
+                  
+                    <p>Horse Veterinary  Grey RoyalBlue with White</p>
+                    <label></label>
+                    <a href="/Products/Items?cat=sports wear&subCat=Horse Veterinary">find a store</a>
+                </div>
+                <div class="clearfix"> </div>
+                <b class="plus-in">+</b>
+            </div>
+            <div class="col-md-4 content-grid">
+                <a href="/Products/Items?cat=sports wear&subCat=hockley jersey" class="lot"><img class="img-responsive " src="~/Items/sports wear/hockley jersey/03-47-600x600.jpg"  alt=""></a>
+                <div class="shoe">
+
+                    <img />
+                    <p>hockey jersey 3.0 V4 Men Grey RoyalBlue with White</p>
+                    <label></label>
+                    <a href="/Products/Items?cat=sports wear&subCat=hockley jersey">find a store</a>
+                </div>
+
+                <div class="clearfix"> </div>
+                <b class="plus-in">+</b>
+            </div>
+            <br />
+            <h3 style="text-align:center"><a>Uniforms</a></h3>
+            
+            <div class="line1"></div>
+            <br />
+            <div class="col-md-4 content-grid">
+                <a href="/Products/Items?cat=sports wear&subCat=american fooyball uniforms" class="lot"><img class="img-responsive " src="~/Items/Uniforms/american fooyball uniforms/01-4.jpg"  alt=""></a>
+                <div class="shoe">
+                    <p>
+                        
+
+                        football uniforms 3.0 V4 Men Grey Royal
+                        Blue with White
+                    </p>
+                    <label></label>
+                    <a href="/Products/Items?cat=sports wear&subCat=american fooyball uniforms">find a store</a>
+                </div>
+                <div class="clearfix"> </div>
+                <b class="plus-in">+</b>
+            </div>
+            <div class="col-md-4 content-grid">
+                <a href="/Products/Items?cat=sports wear&subCat=baketball uniforms" class="lot"><img class="img-responsive " src="~/Items/Uniforms/baketball uniforms/01-45.jpg"  alt=""></a>
+                <div class="shoe">
+                  
+                    <p>baketball uniforms 3.0 V4 Men Grey RoyalBlue with White</p>
+                    <label></label>
+                    <a href="/Products/Items?cat=sports wear&subCat=baketball uniforms">find a store</a>
+                </div>
+                <div class="clearfix"> </div>
+                <b class="plus-in">+</b>
+            </div>
+            <div class="col-md-4 content-grid">
+                <a href="/Products/Items?cat=sports wear&subCat=baseball uniforms" class="lot"><img class="img-responsive " src="~/Items/Uniforms/baseball uniforms/01-5.jpg" alt=""></a>
+                <div class="shoe">
+                    
+                    <p>baseball uniforms 3.0 V4 Men Grey RoyalBlue with White</p>
+                    <label></label>
+                    <a href="/Products/Items?cat=sports wear&subCat=baseball uniforms">find a store</a>
+                </div>
+
+                <div class="clearfix"> </div>
+                <b class="plus-in">+</b>
+            </div>
+            <br />
+            <h3 style="text-align:center"><a>Gloves</a></h3>
+            <div class="line1"></div>
+            <br />
+          
+            <div class="col-md-4 content-grid">
+                <a href="/Products/Items?cat=sports wear&subCat=Assembly Gloves" class="lot"><img class="img-responsive " src="~/Items/Gloves/Assembly Gloves/01-60.jpg"  alt=""></a>
+                <div class="shoe">
+                    <p>
+
+                        Assembly Gloves 3.0 V4 Men Grey Royal
+                        Blue with White
+                    </p>
+                    <label></label>
+                    <a href="/Products/Items?cat=sports wear&subCat=Assembly Gloves">find a store</a>
+                </div>
+                <div class="clearfix"> </div>
+                <b class="plus-in">+</b>
+            </div>
+            <div class="col-md-4 content-grid">
+                <a href="/Products/Items?cat=sports wear&subCat=Assembly Gloves" class="lot"><img class="img-responsive " src="~/Items/Gloves/Assembly Gloves/01-60.jpg" alt=""></a>
+                <div class="shoe">
+                    
+
+                    <p>Assembly Gloves 3.0 V4 Men Grey RoyalBlue with White</p>
+                    <label></label>
+                    <a href="/Products/Items?cat=sports wear&subCat=Assembly Gloves">find a store</a>
+                </div>
+                <div class="clearfix"> </div>
+                <b class="plus-in">+</b>
+            </div>
+            <div class="col-md-4 content-grid">
+                <a href="/Products/Items?cat=sports wear&subCat=Bag Gloves" class="lot"><img class="img-responsive " src="~/Items/Gloves/Bag Gloves/01-48-600x600.jpg" alt=""></a>
+                <div class="shoe">
+
+                    <p>Bag Gloves 3.0 V4 Men Grey RoyalBlue with White</p>
+                    <label></label>
+                    <a href="/Products/Items?cat=sports wear&subCat=Bag Gloves">find a store</a>
+                </div>
+
+                <div class="clearfix"> </div>
+                <b class="plus-in">+</b>
+            </div>
+            <br />
+
+            <h3 style="text-align:center"><a>Boxing Gear</a></h3>
+            <div class="line1"></div>
+            <br />
+            <div class="col-md-4 content-grid">
+                <a href="/Products/Items?cat=sports wear&subCat=Arm Shields" class="lot"><img class="img-responsive " src="~/Items/boxing gear/Arm Shields/01-47-600x600.jpg" alt=""></a>
+                <div class="shoe">
+                    <p>
+                      
+                        Arm Shields 3.0 V4 Men Grey Royal
+                        Blue with White
+                    </p>
+                    <label></label>
+                    <a href="/Products/Items?cat=sports wear&subCat=Arm Shields">find a store</a>
+                </div>
+                <div class="clearfix"> </div>
+                <b class="plus-in">+</b>
+            </div>
+            <div class="col-md-4 content-grid">
+                <a href="/Products/Items?cat=sports wear&subCat=Arm Shields" class="lot"><img class="img-responsive " src="~/Items/boxing gear/Arm Shields/02-47-600x600.jpg" alt=""></a>
+                <div class="shoe">
+               
+                    <p>Arm Shields 3.0 V4 Men Grey RoyalBlue with White</p>
+                    <label></label>
+                    <a href="/Products/Items?cat=sports wear&subCat=Arm Shields">find a store</a>
+                </div>
+                <div class="clearfix"> </div>
+                <b class="plus-in">+</b>
+            </div>
+            <div class="col-md-4 content-grid">
+                <a href="/Products/Items?cat=sports wear&subCat=Focus Pads" class="lot"><img class="img-responsive "  src="~/Items/boxing gear/Focus Pads/01-50-600x600.jpg" alt=""></a>
+                <div class="shoe">
+                  
+                    <p>Focus Pads 3.0 V4 Men Grey RoyalBlue with White</p>
+                    <label></label>
+                    <a href="/Products/Items?cat=sports wear&subCat=Focus Pads">find a store</a>
+                </div>
+
+                <div class="clearfix"> </div>
+                <b class="plus-in">+</b>
+            </div>
+
+            <div class="clearfix"> </div>
+        </div>
+        <!---->
+        <div class="content-top">
+            <div class="col-md-4 top-content">
+                <a href="single.html"><img class="img-responsive " src="images/pi.jpg" alt=""></a>
+            </div>
+            <div class="col-md-4 top-content">
+                <a href="single.html"><img class="img-responsive " src="images/pi1.jpg" alt=""></a>
+            </div>
+            <div class="col-md-4 top-content">
+                <a href="single.html"><img class="img-responsive " src="images/pi2.jpg" alt=""></a>
+            </div>
+
+            <div class="clearfix"> </div>
+        </div>
+       
+    <!--footer-->
+    <div class="footer">
+        <div class="col-md-3 footer-left">
+            <h4>Sports</h4>
+            <div class="run-top">
+                <ul class="run-grid">
+                    <li><a href="/Products/Items?cat=boxing gear&subCat=Hand Wraps">Hand Wraps</a></li>
+                    <li><a href="/Products/Items?cat=boxing gear&subCat=Focus Pads">Focus Pads</a></li>
+                    <li><a href="/Products/Items?cat=boxing gear&subCat=Punching Bags">Punching Bags</a></li>
+                    <li><a href="/Products/Items?cat=Gloves&subCat=Bag Gloves">Bag Gloves</a></li>
+                    <li><a href="/Products/Items?cat=Gloves&subCat=Welding Gloves">Welding Gloves</a></li>
+                    <li><a href="/Products/Items?cat=sports wear&subCat=caps">Caps</a></li>
+                </ul>
+                <ul class="run-grid">
+                    <li><a href="/Products/Items?cat=sports wear&subCat=Rugby Uniforms">STYLE</a></li>
+                    <li><a href="/Products/Items?cat=sports wear&subCat=Rugby Uniforms">SPECIAL</a></li>
+                    <li><a href="/Products/Items?cat=sports wear&subCat=Rugby Uniforms">BRAND EVENTS</a></li>
+                    
+                </ul>
+               <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="col-md-3 footer-left left-footer">
+            <h4>Latest</h4>
+            <div class="run-top top-run">
+                <ul class="run-grid">
+                    <li><a href="/Products/Items?cat=Uniforms&subCat=american fooyball uniforms">american fooyball uniforms</a></li>
+                    <li><a href="/Products/Items?cat=Uniforms&subCat=american fooyball uniforms">goal keeper uniforms</a></li>
+                    <li><a href="/Products/Items?cat=Uniforms&subCat=american fooyball uniforms">Rugby Uniforms</a></li>
+                    <li><a href="/Products/Items?cat=boxing gear&subCat=Tudo Shorts">Tudo Shorts</a></li>
+
+                </ul>
+                <ul class="run-grid">
+                    <li><a href="/Products/Items?cat=sports wear&subCat=Varsity Jackets">Varsity Jackets</a></li>
+                    <li><a href="/Products/Items?cat=sports wear&subCat=Track Suits">Track Suits</a></li>
+
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="col-md-2 footer-left left-footer">
+            <h4>Your Account</h4>
+            <ul class="run-grid-in">
+                <li><a href="account.html"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="col-md-4 footer-left left-footer">
+            <ul class="social-in">
+                <li><a href="#"><i> </i></a></li>
+                <li><a href="#"><i class="youtube"> </i></a></li>
+                <li><a href="#"><i class="facebook"> </i></a></li>
+                <li><a href="#"><i class="twitter"> </i></a></li>
+            </ul>
+            <div class="letter">
+                <h5>NEWSLETTER</h5>
+                <span>in the next article</span>
+                <h6>NRL: five things we learned this weekend</h6>
+                <p>In support of suburban games; Warriors rip</p>
+                <a href="register.html" class="sign">SIGN UP AND GET MORE</a>
+                <p class="footer-class"> © 2015 Sport All Rights Reserved | Template by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+            </div>
+
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <script src="~/js/angular.min.js"></script>
+    
+</body>
+</html>

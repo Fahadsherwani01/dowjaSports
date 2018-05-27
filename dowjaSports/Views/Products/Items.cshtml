@@ -1,0 +1,52 @@
+﻿@model IQueryable<dowjaSports.Models.Product>
+
+@{
+    ViewBag.Title = "Items";
+    Layout = "~/Views/Shared/_Mylayout.cshtml";
+}
+
+<div class="product-grids">
+    <div class="container">
+        <div class="product-top">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 grid-product-in">
+                    <div class=" product-grid">
+                        <a href="#" class="imgClick" data-id="@item.Id"><img class="img-responsive " src="~/Items/@item.Category/@item.SubCategory/@item.ProductURL" alt=""></a>
+                        <div class="shoe-in">
+
+                            <h6><a class="btnClick">@item.ProductName</a></h6>
+                            <label>@item.ProductPrice</label>
+                            <a href="single.html" class="store">FIND A STORE</a>
+                        </div>
+
+                        <b class="btn plus-on delbtn" data-toggle="modal" data-target="#myModal">+</b>
+
+                    </div>
+                </div>
+
+
+            }
+
+        </div>
+
+    </div>
+</div>
+
+
+@section scripts{
+    
+    <script>
+        $(".imgClick").on("click", function () {
+            var name = $(this).data("id");
+
+            alert(name);
+
+            window.location.href = "/Products/itemDetail?id="+name;
+        });
+    </script>
+
+
+    }
+
+

@@ -1,0 +1,175 @@
+﻿@model dowjaSports.Models.Product
+@{
+    ViewBag.Title = "itemDetail";
+    Layout = "~/Views/Shared/_Mylayout.cshtml";
+}
+
+    <!---->
+
+
+    <div class="container">
+        <div class="single">
+            <div class="col-md-12 top-in-single">
+                <div class="col-md-5 single-top">
+                    <ul id="etalage">
+                        <li>
+                            <a href="optionallink.html">
+                              
+                                <img class="etalage_thumb_image img-responsive" src="~/Items/@Model.Category/@Model.SubCategory/@Model.ProductURL" alt="">
+                                <img class="etalage_source_image img-responsive"src="~/Items/@Model.Category/@Model.SubCategory/@Model.ProductURL" alt="">
+                            </a>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+                <div class="col-md-7 single-top-in">
+                    <div class="single-para">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                        <div class="star">
+                            <ul>
+                                <li><i> </i></li>
+                                <li><i> </i></li>
+                                <li><i> </i></li>
+                                <li><i> </i></li>
+                                <li><i> </i></li>
+                            </ul>
+                            <div class="review">
+                                <a href="#"> 3 reviews </a>/
+                                <a href="#">  Write a review</a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+
+                        <label class="add-to">$32.8</label>
+
+                        <div class="available">
+                            <h6>Available Options :</h6>
+                            <ul>
+
+                                <li>
+                                    Size:<select id="size">
+                                        <option>Large</option>
+                                        <option>Medium</option>
+                                        <option>small</option>
+                                        <option>Large</option>
+                                        <option>small</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    Payment Method:
+                                    <select id="payment">
+                                        <option>Cash On Delivery</option>
+                                        <option>Visa Card</option>
+                                        <option>Master Card</option>
+                                        <option >Paypal</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    Quanity:
+                                    <input value="1" id="quantity" type="text" maxlength="3" />
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a id="cart" data-id="@Model.Id" class="cart btn ">Add To Cart</a>
+
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+                <div class="product-top">
+                    <div class="col-md-4 grid-product-in">
+                        <div class=" product-grid">
+                            <a href="single.html"><img class="img-responsive " src="images/sh2.png" alt=""></a>
+                            <div class="shoe-in">
+                                <h6><a href="single.html">Lorem Ipsum is simply</a></h6>
+                                <label>$67.99</label>
+                                <a href="single.html" class="store">FIND A STORE</a>
+                            </div>
+
+                            <b class="plus-on">+</b>
+                        </div>
+                    </div>
+                    <div class="col-md-4 grid-product-in">
+                        <div class=" product-grid">
+                            <a href="single.html"><img class="img-responsive " src="images/pr1.png" alt=""></a>
+                            <div class="shoe-in">
+                                <h6><a href="single.html">Lorem Ipsum is simply</a></h6>
+                                <label>$67.99</label>
+                                <a href="single.html" class="store">FIND A STORE</a>
+                            </div>
+
+                            <b class="plus-on">+</b>
+                        </div>
+                    </div>
+                    <div class="col-md-4 grid-product-in">
+                        <div class=" product-grid">
+                            <a href="single.html"><img class="img-responsive " src="images/pr.png" alt=""></a>
+                            <div class="shoe-in">
+                                <h6><a href="single.html">Lorem Ipsum is simply </a></h6>
+                                <label>$67.99</label>
+                                <a href="single.html" class="store">FIND A STORE</a>
+                            </div>
+
+                            <b class="plus-on">+</b>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+           
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+    @section scripts{
+        
+        <script>
+            $("#cart").click(function () {
+                var items = document.getElementById("totalItem");
+
+                $.ajax({
+
+                    url: "/Products/addToCart",
+                    datatype: "text",
+                    data: { 'id': $('#cart').data("id"), 'quantity': $('#quantity').val(), 'payment': $('#payment').val(), 'size': $('#size').val()},
+                    type: "GET",
+                    beforeSend: function () {
+                       
+                        $("#cart").attr("disabled", true);
+                    },
+                    success: function (data) {
+                        alert("Added To Cart");
+                        $("#cart").attr("disabled", false);
+                        $.ajax({
+
+                            url: "/Products/totalCookies",
+                            datatype: "text",
+                            type: "GET",
+
+                            success: function (data) {
+                                items.innerHTML = "Cart(" + data + ")";
+                            },
+                            error: function () {
+                                alert("ERROR, Try Again");
+                            },
+                            complete: function () {
+
+                            }
+                        });
+                      
+                    },
+                    error: function () {
+                        alert("ERROR, Try Again");
+                    },
+                    complete: function () {
+                      
+                    }
+                });
+            });
+
+        </script>
+        
+        }
+   

@@ -1,0 +1,84 @@
+﻿@{
+    Layout = "~/Views/Shared/_Mylayout.cshtml";
+}
+
+
+
+<br />
+<h2 style="text-align:center">Fill The Information Form</h2>
+
+<div class="form-horizontal">
+    
+    <hr />
+
+    <div class="form-group">
+        <label asp-for="username" class="col-md-2 control-label">Name</label>
+        <div class="col-md-5">
+            <input asp-for="username" id="username" class="form-control" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="phone" class="col-md-2 control-label">Phone N0.</label>
+        <div class="col-md-5">
+            <input asp-for="phone" id="phone" class="form-control" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="email" class="col-md-2 control-label">Email</label>
+        <div class="col-md-5">
+            <input asp-for="email" id="email" class="form-control" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="address" class="col-md-2 control-label">Address</label>
+        <div class="col-md-5">
+            <input asp-for="address" id="address" class="form-control" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" id="cart" value="Check Out" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+
+
+@section Scripts
+{
+
+    <script>
+
+
+        $("#cart").click(function () {
+            //alert('hhdh');
+
+            $.ajax({
+
+                url: "/Products/checkout",
+                datatype: "text",
+                data: { 'username': $('#username').val(), 'phone': $('#phone').val(), 'email': $('#email').val(), 'address': $('#address').val() },
+                type: "GET",
+                beforeSend: function () {
+                    $("#cart").attr("disabled", true);
+
+                },
+                success: function (data) {
+                    alert(data);
+                    $("#cart").attr("disabled", false);
+                    location.replace("/Home/Index");
+                },
+                error: function (data) {
+                    alert(data);
+                    $("#cart").attr("disabled", false);
+                },
+
+            });
+         });
+
+    </script>
+
+}
